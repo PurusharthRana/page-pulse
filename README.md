@@ -10,7 +10,17 @@ A full-stack web application that audits any website URL and generates a concise
 
 ## 📖 Overview
 
-Page Pulse is a simple website auditing tool built as part of the **Digital Heroes Software Development (SDE) Training Task**. It accepts a website URL, analyzes the page, and generates a concise report with key SEO and accessibility metrics while gracefully handling invalid URLs, timeouts, and unsupported content.
+Page Pulse is a simple website auditing tool that accepts a public website URL, analyzes the page, and generates a concise report containing key SEO and accessibility metrics while gracefully handling invalid URLs, timeouts, and unsupported content.
+
+---
+
+## 🌐 Live Demo
+
+- **Frontend:**  
+  https://frontend-production-8a6be.up.railway.app/
+
+- **Backend Base URL:**  
+  https://page-pulse-production-f028.up.railway.app/
 
 ---
 
@@ -65,6 +75,12 @@ frontend/
 
 ### Request
 
+**Health Check:** 
+
+ **GET** `/api/v1/audit/test`
+
+**Website Audit:**
+
 **POST** `/api/v1/audit`
 
 ```json
@@ -115,6 +131,8 @@ Separated the application into Controller, Service, and Payload layers to keep r
 
 ## 🚀 Running Locally
 
+Run the backend and frontend in separate terminals.
+
 ### Backend
 
 ```bash
@@ -130,18 +148,11 @@ npm run dev
 
 ---
 
-## 🌍 Live Demo
-
-- **Frontend:** `<your frontend URL>`
-- **Backend:** `<your backend URL>`
-
----
-
 ## 🔮 Future Improvements
 
 - Add SEO score calculation
-- Export audit reports as PDF
 - Improve accessibility analysis
+- Export audit reports as PDF
 - Dockerize the application
 - Add CI/CD pipeline
 
@@ -155,4 +166,8 @@ B.Tech (Information Technology), IIIT Una
 
 ---
 
-Built for **Digital Heroes Training Task**
+## 🏷️ Acknowledgement
+
+This project was developed as part of the **Digital Heroes Software Development (SDE) Training Task**.
+
+Official Website: [Digital Heroes](https://digitalheroesco.com/)
