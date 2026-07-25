@@ -1,8 +1,6 @@
 <div align="center">
 
-# 🚀 Page Pulse
-
-### Website Audit Tool
+# 🌐 Page Pulse: Website Audit Tool
 
 A full-stack web application that audits any website URL and generates a concise report containing HTTP status, response time, page title, meta description, H1 count, missing image alt attributes, and approximate word count.
 
@@ -12,7 +10,7 @@ A full-stack web application that audits any website URL and generates a concise
 
 ## 📖 Overview
 
-Page Pulse is a simple website auditing tool built as part of the **Digital Heroes Software Development (SDE) Training Task**. It accepts a website URL, analyzes the page, and returns key SEO and accessibility metrics while handling invalid URLs, timeouts, and unsupported content gracefully.
+Page Pulse is a simple website auditing tool built as part of the **Digital Heroes Software Development (SDE) Training Task**. It accepts a website URL, analyzes the page, and generates a concise report with key SEO and accessibility metrics while gracefully handling invalid URLs, timeouts, and unsupported content.
 
 ---
 
