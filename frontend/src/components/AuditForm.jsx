@@ -26,7 +26,7 @@ export default function AuditForm({ onAnalyze, isLoading }) {
             spellCheck={false}
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            placeholder="https://example.com"
+            placeholder="Enter a website (e.g., github.com)"
             disabled={isLoading}
             className="w-full min-w-0 bg-transparent text-[15px] text-ink-900 placeholder:text-ink-500/50 focus:outline-none disabled:opacity-60"
           />

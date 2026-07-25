@@ -1,13 +1,8 @@
-package com.purusharth.pagepulse.exception;
+    package com.purusharth.pagepulse.exception;
 
-public class InvalidUrlException extends RuntimeException{
-    String message;
+    public class InvalidUrlException extends RuntimeException {
 
-    public InvalidUrlException() {
+        public InvalidUrlException(String message) {
+            super(message);
+        }
     }
-
-    public InvalidUrlException(String message) {
-        super(String.format("Error: %s", message));
-        this.message = message;
-    }
-}

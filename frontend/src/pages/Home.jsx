@@ -9,18 +9,18 @@ import { runAudit } from '../services/auditService.js'
 export default function Home() {
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [result, setResult] = useState(null)
-  const [errorCode, setErrorCode] = useState(null)
+  const [errorMessage, setErrorMessage] = useState(null)
 
   async function handleAnalyze(url) {
-    setStatus('loading')
-    setErrorCode(null)
+    setStatus('loading');
+    setErrorMessage(null);
     try {
-      const data = await runAudit(url)
-      setResult(data)
-      setStatus('success')
+      const data = await runAudit(url);
+      setResult(data);
+      setStatus('success');
     } catch (err) {
-      setErrorCode(err.code || 'SERVER_ERROR')
-      setStatus('error')
+      setErrorMessage(err.message || 'Something went wrong.');
+      setStatus('error');
     }
   }
 
@@ -30,16 +30,11 @@ export default function Home() {
 
       <section className="mx-auto max-w-2xl px-6">
         <AuditForm onAnalyze={handleAnalyze} isLoading={status === 'loading'} />
-        <p className="mt-3 text-center text-xs text-ink-500/80">
-          Try appending <code className="rounded bg-ink-900/5 px-1 py-0.5 font-mono">timeout</code> or{' '}
-          <code className="rounded bg-ink-900/5 px-1 py-0.5 font-mono">error</code> to the URL to preview
-          error states.
-        </p>
       </section>
 
       <section className="mx-auto mt-10 max-w-3xl px-6 pb-20">
         {status === 'loading' && <LoadingSkeleton />}
-        {status === 'error' && <ErrorAlert code={errorCode} />}
+        {status === 'error' && <ErrorAlert message={errorMessage} />}
         {status === 'success' && result && (
           <>
             <div className="mb-4 flex items-center justify-between">

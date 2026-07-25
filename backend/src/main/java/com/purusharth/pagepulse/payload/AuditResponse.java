@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuditResponse {
+    private String url;
     private Integer httpStatus;
     private Long responseTime;
     private String title;
